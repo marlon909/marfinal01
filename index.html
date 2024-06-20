@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autenticación</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="password"] {
+            font-size: 1.5em;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 1.5em;
+            }
+            input[type="password"], button {
+                font-size: 1.2em;
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Por favor, ingresa una contraseña valida</h2>
+        <form id="authForm">
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Aceptar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('authForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+            const passwordToForm = {
+                '154': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '139': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '133': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '109': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '169': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '120': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '132': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '111': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '113': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '170': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '200': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '118': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '125': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '187': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '182': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '176': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '198': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '101': 'https://forms.gle/XetQXR5CtRkjvCou8',
+                '799': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '785': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '733': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '706': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '747': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '701': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '721': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '786': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '772': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '765': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '707': 'https://forms.gle/TqkJapHQqSWTDVN47',
+                '656': 'https://forms.gle/4KQPt3n54tx3csms8',
+                '634': 'https://forms.gle/4KQPt3n54tx3csms8',
+                '672': 'https://forms.gle/4KQPt3n54tx3csms8',
+                '612': 'https://forms.gle/4KQPt3n54tx3csms8',
+                '625': 'https://forms.gle/4KQPt3n54tx3csms8',
+                '207': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '267': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '261': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '292': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '281': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '249': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '299': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '293': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '211': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '268': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '244': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '291': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '257': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '242': 'https://forms.gle/94ajurfgmTUwarJPA',
+                '496': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '441': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '588': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '598': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '405': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '506': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '462': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '447': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '454': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '488': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '571': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '437': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '502': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '564': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '465': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '486': 'https://forms.gle/ztgcoMNLXNZu6MQz8',
+                '350': 'https://forms.gle/tbiLX3bYqaqeee5d9',
+                '371': 'https://forms.gle/tbiLX3bYqaqeee5d9',
+                '366': 'https://forms.gle/tbiLX3bYqaqeee5d9',
+                '393': 'https://forms.gle/tbiLX3bYqaqeee5d9',
+                '348': 'https://forms.gle/tbiLX3bYqaqeee5d9',
+                '342': 'https://forms.gle/tbiLX3bYqaqeee5d9',
+                '9048': 'https://forms.gle/HApjUiVqm6MSm7XZ7'
+            };
+
+            if (password in passwordToForm) {
+                document.getElementById('password').value = ''; // Limpia el campo de contraseña
+                window.location.href = passwordToForm[password];
+            } else {
+                alert('Contraseña incorrecta, digite una correcta');
+            }
+        });
+    </script>
+</body>
+</html>
